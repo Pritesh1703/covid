@@ -2,7 +2,7 @@
     "data": [
                 {
                     "action": "extend",
-                    "helpDescription": "I can serve basic raw ration to nearby poor people, do contact me if you need my help.",
+                    "helpDescription": "I can serve basic raw ration to nearby poor people, do contact me if you seek my help.",
                     "address": "Hyderabad",
                     "mobileNumber": "999999999",
                     "email": "gaurav.mail125@gmail.com",
@@ -10,7 +10,7 @@
                     "subAddress": "Gachibowli"
                 },
                 {
-                    "action": "need",
+                    "action": "seek",
                     "helpDescription": "I am not running out of money and unable to purchase basic ration, if we did not get any help soon we will not have anything to eat.",
                     "address": "Bangalore",
                     "mobileNumber": "999999999",
@@ -19,8 +19,8 @@
                     "subAddress": "Hi Tech City"
                 },
                 {
-                    "action": "need",
-                    "helpDescription": "I can serve basic raw ration to nearby poor people, do contact me if you need my help.",
+                    "action": "seek",
+                    "helpDescription": "I can serve basic raw ration to nearby poor people, do contact me if you seek my help.",
                     "address": "Hyderabad",
                     "mobileNumber": "999999999",
                     "email": "gaurav.mail125@gmail.com",

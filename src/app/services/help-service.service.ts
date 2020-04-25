@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HelpServiceService {
 
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth, public router: Router) {
   }
 
   getHelpData() {
@@ -24,6 +25,8 @@ export class HelpServiceService {
       data.push(object);
       localStorage.setItem('help', JSON.stringify(data));
       console.log(this.getHelpData());
+      console.log('redirecting');
+      this.router.navigate(['dashboard']);
     });
   }
 

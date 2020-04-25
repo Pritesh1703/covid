@@ -19,6 +19,7 @@ export class LoginService {
 
   login() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).finally(() => {
+      localStorage.clear();
       this.route.navigate(['dashboard']);
     });
   }

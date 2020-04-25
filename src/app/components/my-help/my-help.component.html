@@ -1,15 +1,18 @@
 <div class="card mt-3 left-card">
   <div class="card-header">
-    My Help
+    <div class="float-left">My Help</div>
+    <div class="float-right">
+      <button class="btn btn-primary btn-sm ml-8px" (click)="refresh()">refresh</button>
+    </div>
   </div>
   <div class="card-body">
     <div class="help-content" *ngFor="let help of helpList">
       <div
         class="long-bar"
-        *ngIf="user.email.indexOf(help.email) >= 0 && help.action === 'need'"
+        *ngIf="user.email.indexOf(help.email) >= 0 && help.action === 'seek'"
         (click)="open(content2, help)"
       >
-        help needed at {{ help.subAddress }}, {{ help.address }}
+        help seeked at {{ help.subAddress }}, {{ help.address }}
       </div>
       <div
         class="long-bar"
