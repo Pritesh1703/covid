@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-help-connect',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpConnectComponent implements OnInit {
 
-  constructor() { }
+  public helpConnectForm:FormGroup;
+
+  constructor(
+    private fb:FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.helpConnectForm=this.fb.group({
+      action:['',Validators.required],
+      helpDescription:['',Validators.required],
+      // address:['',Validators.required],
+      // mobile:['',Validators.required]
+    })
   }
 
 }

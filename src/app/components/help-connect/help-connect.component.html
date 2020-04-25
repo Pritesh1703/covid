@@ -4,15 +4,17 @@
   </div>
   <div class="card-body">
     <p class="card-text">Ask/Seek for Help!</p>
+    <form formGroup="helpConnectForm">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown</button>
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" formControlName="action">Dropdown</button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Looking for help</a>
           <a class="dropdown-item" href="#">Want to help</a>
         </div>
       </div>
-      <input type="text" class="form-control" placeholder="How do you want to get/recieve help">
+      <input type="text" class="form-control" formControlName="helpDescription" placeholder="How do you want to get/recieve help">
     </div>
+  </form>
   </div>
 </div>
