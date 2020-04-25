@@ -35,6 +35,7 @@ export class HelpListComponent implements OnInit {
   refresh(): void {
     this.helpList = this.filteredHelpList = this.helpSvc.getHelpData();
     this.uniqueLocations = this.getAllLocations();
+    console.log('refresh called');
   }
 
   open(content, data) {
