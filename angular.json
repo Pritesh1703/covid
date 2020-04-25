@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "covidHelp"
+  "defaultProject": "covidHelp",
+  "cli": {
+    "analytics": false
+  }
 }
