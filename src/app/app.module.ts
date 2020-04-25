@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HelpServiceService } from './services/help-service.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -35,6 +36,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

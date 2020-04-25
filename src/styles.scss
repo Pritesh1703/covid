@@ -1,9 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
-body{ margin-top: 80px; }
+body{ 
+  margin-top: 80px; 
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+.leftSide, .rightSide{
+  height:100%;
+  width:100%;
+}
+
+.left-card{
+  opacity: 0.8;
+}
+
+input::placeholder, .card {
+  font-size: 0.8em;
+}
+
