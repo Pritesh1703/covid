@@ -3,14 +3,17 @@
     Help Connect
   </div>
   <div class="card-body">
-    <p class="card-text">Ask/Seek for Help!</p>
+    <div *ngIf="successMsg" class="alert alert-success" role="alert">
+      Your help request has been raised!
+    </div>
+    <p class="card-text">Seek/Extend for Help!</p>
     <form [formGroup]="helpConnectForm">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <select class="form-control" id="sel1" formControlName="action">
-          <option value="">select action</option>
-          <option value="seek">looking for help</option>
-          <option value="extend">want to help</option>
+          <option value="">Select Action</option>
+          <option value="seek">Looking for help</option>
+          <option value="extend">Want to help</option>
         </select>
       </div>
       <input type="text" class="form-control" formControlName="helpDescription" placeholder="How do you want to get/recieve help">
@@ -22,7 +25,7 @@
       <input type="text" class="form-control" formControlName="mobileNumber" placeholder="Mobile Number">
     </div>
     <div class="mb-3">
-      <button type="button" class="btn btn-dark btn-block" (click)="onSubmit()">Help</button>
+      <button [disabled]="helpConnectForm.invalid" type="button" class="btn btn-dark btn-block" (click)="onSubmit()">Help</button>
     </div>
   </form>
   </div>

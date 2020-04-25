@@ -10,6 +10,8 @@ import { HelpServiceService } from 'src/app/services/help-service.service';
 export class HelpConnectComponent implements OnInit {
 
   public helpConnectForm:FormGroup;
+  public successMsg:boolean;
+  public errorMsg:boolean;
 
   constructor(
     private fb:FormBuilder,
@@ -27,6 +29,8 @@ export class HelpConnectComponent implements OnInit {
 
   public onSubmit(){
     this.helpSvc.addHelpData(this.helpConnectForm.value);
+    this.successMsg=true;
+    this.helpConnectForm.reset();
     console.log(this.helpConnectForm.value);
     console.log(this.helpSvc.getHelpData());
   }
