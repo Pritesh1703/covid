@@ -18,7 +18,7 @@
               *ngIf="help.action === 'extend'"
               (click)="open(content, help)"
             >
-              {{ help.address }}
+              help needed at {{ help.subAddress }}, {{help.address}}
             </div>
           </div>
         </ng-template>
@@ -31,7 +31,7 @@
               *ngIf="help.action === 'need'"
               (click)="open(content, help)"
             >
-              {{ help.address }}
+            help available at {{ help.subAddress }}, {{help.address}}
             </div>
           </div>
         </ng-template>
