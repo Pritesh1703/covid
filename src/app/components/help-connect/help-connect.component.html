@@ -1,20 +1,27 @@
-<div class="card mt-3">
+<div class="card mt-3 left-card">
   <div class="card-header">
     Help Connect
   </div>
   <div class="card-body">
     <p class="card-text">Ask/Seek for Help!</p>
-    <form formGroup="helpConnectForm">
+    <form [formGroup]="helpConnectForm">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" formControlName="action">Dropdown</button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Looking for help</a>
-          <a class="dropdown-item" href="#">Want to help</a>
-        </div>
+        <select class="form-control" id="sel1" formControlName="action">
+          <option value="">select action</option>
+          <option value="seek">looking for help</option>
+          <option value="extend">want to help</option>
+        </select>
       </div>
       <input type="text" class="form-control" formControlName="helpDescription" placeholder="How do you want to get/recieve help">
     </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" formControlName="address" placeholder="address">
+    </div>
+    <div class="md-3">
+      <input type="text" class="form-control" formControlName="address" placeholder="Mobile Number">
+    </div>
+
   </form>
   </div>
 </div>

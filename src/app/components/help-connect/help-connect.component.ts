@@ -18,8 +18,8 @@ export class HelpConnectComponent implements OnInit {
     this.helpConnectForm=this.fb.group({
       action:['',Validators.required],
       helpDescription:['',Validators.required],
-      // address:['',Validators.required],
-      // mobile:['',Validators.required]
+      address:['',Validators.required],
+      mobile:['',Validators.required]
     })
   }
 
