@@ -10,7 +10,7 @@ export class LoginService {
   public user: firebase.User;
 
   constructor(private afAuth: AngularFireAuth, private route: Router) { 
-    afAuth.authState.subscribe(user => this.user = user)
+    afAuth.authState.subscribe(user => this.user = user);
   }
 
   public getUser() {

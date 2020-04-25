@@ -32,6 +32,11 @@ export class HelpListComponent implements OnInit {
     this.uniqueLocations = this.getAllLocations();
   }
 
+  refresh(): void {
+    this.helpList = this.filteredHelpList = this.helpSvc.getHelpData();
+    this.uniqueLocations = this.getAllLocations();
+  }
+
   open(content, data) {
     this.helpObj = data;
     this.modalService

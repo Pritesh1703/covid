@@ -6,6 +6,7 @@
       <select name="filter" id="filter" (change)="filterBylocation(loc.value)" #loc>
           <option *ngFor="let location of uniqueLocations" [value]="location">{{location}}</option>
       </select>
+      <button class="btn btn-primary btn-sm ml-8px" (click)="refresh()">refresh</button>
     </div>
   </div>
   <div class="card-body">
