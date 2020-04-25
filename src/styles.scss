@@ -12,11 +12,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width:100%;
 }
 
-.left-card{
-  opacity: 0.8;
-}
-
 input::placeholder, .card {
   font-size: 0.8em;
 }
 
+.card-header{
+  background-color: #b50919;
+  font-size: x-large;
+  color: #fff;
+}

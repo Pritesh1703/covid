@@ -19,6 +19,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HelpServiceService } from './services/help-service.service';
+import { InformationComponent } from './information/information.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,14 @@ import { HelpServiceService } from './services/help-service.service';
     CovidTrackerComponent,
     LoginComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),

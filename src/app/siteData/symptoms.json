@@ -1,0 +1,60 @@
+{
+  "data": [
+           {
+                  "symptom": "Fever",
+                  "percentage": "87.9%"
+              },
+              {
+                "symptom": "Dry Cough",
+                "percentage": "67.7%"
+            },
+            {
+              "symptom": "Fatigue",
+              "percentage": "38.1%"
+          },
+          {
+            "symptom": "Sputum production",
+            "percentage": "33.4%"
+        },
+        {
+          "symptom": "Shortness Of breath",
+          "percentage": "18.6%"
+      },
+      {
+        "symptom": "Muscle Pain or joint pain",
+        "percentage": "14.8%"
+    },
+    {
+      "symptom": "Sore throat",
+      "percentage": "13.9%"
+  },
+  {
+    "symptom": "Headache",
+    "percentage": "13.6%"
+},
+{
+  "symptom": "Chills",
+  "percentage": "11.4%"
+},
+{
+  "symptom": "Nausea or vomiting",
+  "percentage": "5.0%"
+},
+{
+  "symptom": "Nasal congestion",
+  "percentage": "4.8%"
+},
+{
+  "symptom": "Diarrhea",
+  "percentage": "3.7%"
+},
+{
+  "symptom": "Haemoptysis",
+  "percentage": "0.9%"
+},
+{
+  "symptom": "Conjuctival conjestion",
+  "percentage": "0.8%"
+}
+      ]
+}
