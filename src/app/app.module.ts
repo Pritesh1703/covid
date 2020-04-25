@@ -22,6 +22,7 @@ import { HelpServiceService } from './services/help-service.service';
 import { InformationComponent } from './information/information.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AssessmentComponent } from './components/assessment/assessment.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     NavbarComponent,
     DashboardComponent,
-    InformationComponent
+    InformationComponent,
+    AssessmentComponent
   ],
   imports: [
     BrowserModule,
