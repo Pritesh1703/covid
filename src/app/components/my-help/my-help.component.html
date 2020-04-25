@@ -3,6 +3,42 @@
     My Help
   </div>
   <div class="card-body">
-    <p class="card-text">You haven't raised any help!</p>
+    <div class="help-content" *ngFor="let help of helpList">
+      <div
+        class="long-bar"
+        *ngIf="user.email.indexOf(help.email) >= 0 && help.action === 'need'"
+        (click)="open(content2, help)"
+      >
+        help needed at {{ help.subAddress }}, {{ help.address }}
+      </div>
+      <div
+        class="long-bar"
+        *ngIf="help.action === 'extend' && user.email.indexOf(help.email) >= 0"
+        (click)="open(content, help)"
+      >
+        help available at {{ help.subAddress }}, {{ help.address }}
+      </div>
+    </div>
   </div>
 </div>
+
+<ng-template #content2 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ helpObj.name }}</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{ helpObj.helpDescription }}
+  </div>
+  <div class="modal-footer">
+    Contact me on <b>mobile:</b> {{ helpObj.mobileNumber }} and <b>email:</b>
+    {{ helpObj.email }}
+  </div>
+</ng-template>

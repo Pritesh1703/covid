@@ -3,8 +3,9 @@
     <div class="float-left">Help Cases</div>
     <div class="float-right">
       Filter based on location :
-      <select name="filter" id="filter" (change)="filterBylocation(loc.value)" #loc>
-          <option *ngFor="let location of uniqueLocations" [value]="location">{{location}}</option>
+    <select class="form-control-custom" placeholder="Select Role" name="filter" id="filter" (change)="filterBylocation(loc.value)" #loc>
+        <option value="">Select Location</option>  
+        <option *ngFor="let location of uniqueLocations" [value]="location">{{location}}</option>
       </select>
       <button class="btn btn-primary btn-sm ml-8px" (click)="refresh()">refresh</button>
     </div>
@@ -16,7 +17,7 @@
           <div class="help-content" *ngFor="let help of filteredHelpList">
             <div
               class="long-bar"
-              *ngIf="help.action === 'extend'"
+              *ngIf="help.action === 'need'"
               (click)="open(content, help)"
             >
               help needed at {{ help.subAddress }}, {{help.address}}
@@ -29,7 +30,7 @@
           <div class="help-content" *ngFor="let help of filteredHelpList">
             <div
               class="long-bar"
-              *ngIf="help.action === 'need'"
+              *ngIf="help.action === 'extend'"
               (click)="open(content, help)"
             >
             help available at {{ help.subAddress }}, {{help.address}}
