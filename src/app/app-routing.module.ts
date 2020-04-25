@@ -8,7 +8,7 @@ import { CovidContainerComponent } from './components/covid-container/covid-cont
 const routes: Routes = [
   {path:'',component:CovidContainerComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: CovidContainerComponent }
 ];
 
 @NgModule({
