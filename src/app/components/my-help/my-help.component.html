@@ -6,10 +6,17 @@
     <div class="help-content" *ngFor="let help of helpList">
       <div
         class="long-bar"
-        *ngIf="user.email.indexOf(help.email)>=0"
+        *ngIf="user.email.indexOf(help.email) >= 0 && help.action === 'need'"
         (click)="open(content2, help)"
       >
-        help needed at {{ help.subAddress }}, {{help.address}}
+        help needed at {{ help.subAddress }}, {{ help.address }}
+      </div>
+      <div
+        class="long-bar"
+        *ngIf="help.action === 'extend' && user.email.indexOf(help.email) >= 0"
+        (click)="open(content, help)"
+      >
+        help available at {{ help.subAddress }}, {{ help.address }}
       </div>
     </div>
   </div>
@@ -35,4 +42,3 @@
     {{ helpObj.email }}
   </div>
 </ng-template>
-
