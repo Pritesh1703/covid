@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HelpServiceService } from 'src/app/services/help-service.service';
 
 @Component({
   selector: 'app-help-list',
@@ -10,9 +11,12 @@ export class HelpListComponent implements OnInit {
 
   closeResult = '';
 
-  constructor(private modalService: NgbModal) { }
+  helpList = [];
+
+  constructor(private modalService: NgbModal, private helpSvc: HelpServiceService) { }
 
   ngOnInit(): void {
+    this.helpList = this.helpSvc.getHelpData();
   }
 
   open(content) {
@@ -21,6 +25,10 @@ export class HelpListComponent implements OnInit {
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
+  }
+
+  openModal() {
+    
   }
 
   private getDismissReason(reason: any) {
