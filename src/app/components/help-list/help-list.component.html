@@ -4,10 +4,19 @@
   </div>
   <div class="card-body">
     <ngb-tabset [destroyOnHide]="false">
-      <ngb-tab title="Helpers">
+      <ngb-tab title="List of Helpers">
         <ng-template ngbTabContent>
-          <div class="help-content">
-            <div class="long-bar" *ngFor="let help of helpList" (click)="open(content, help)">
+          <div class="help-content" *ngFor="let help of helpList">
+            <div class="long-bar" *ngIf="help.action === 'extend'" (click)="open(content, help)">
+              {{help.address}}
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="List of Help Seekers">
+        <ng-template ngbTabContent>
+          <div class="help-content" *ngFor="let help of helpList">
+            <div class="long-bar" *ngIf="help.action === 'need'" (click)="open(content, help)">
               {{help.address}}
             </div>
           </div>
