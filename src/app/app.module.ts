@@ -21,6 +21,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HelpServiceService } from './services/help-service.service';
 import { InformationComponent } from './information/information.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgbModule
   ],
   providers: [LoginService, AngularFireAuth, HelpServiceService],
   bootstrap: [AppComponent]
