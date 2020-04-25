@@ -15,9 +15,12 @@ export class HelpServiceService {
 
   public addHelpData(object) {
     let data = JSON.parse(localStorage.getItem('help'));
-    let user = this.afAuth.authState.subscribe(user => {
+    this.afAuth.authState.subscribe(user => {
       object.name = user.displayName;
       object.email = user.email;
+      if(!object.subAddress) {
+        object.subAddress = 'Locality Of Somewhere in';
+      }
       data.push(object);
       localStorage.setItem('help', JSON.stringify(data));
       console.log(this.getHelpData());
