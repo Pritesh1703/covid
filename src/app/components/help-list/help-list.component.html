@@ -1,23 +1,37 @@
 <div class="card mt-3 left-card">
   <div class="card-header">
-    Help Cases
+    <div class="float-left">Help Cases</div>
+    <div class="float-right">
+      Filter based on location :
+      <select name="filter" id="filter" (change)="filterBylocation(loc.value)" #loc>
+          <option *ngFor="let location of uniqueLocations" [value]="location">{{location}}</option>
+      </select>
+    </div>
   </div>
   <div class="card-body">
     <ngb-tabset [destroyOnHide]="false">
       <ngb-tab title="List of Helpers">
         <ng-template ngbTabContent>
-          <div class="help-content" *ngFor="let help of helpList">
-            <div class="long-bar" *ngIf="help.action === 'extend'" (click)="open(content, help)">
-              {{help.address}}
+          <div class="help-content" *ngFor="let help of filteredHelpList">
+            <div
+              class="long-bar"
+              *ngIf="help.action === 'extend'"
+              (click)="open(content, help)"
+            >
+              {{ help.address }}
             </div>
           </div>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="List of Help Seekers">
         <ng-template ngbTabContent>
-          <div class="help-content" *ngFor="let help of helpList">
-            <div class="long-bar" *ngIf="help.action === 'need'" (click)="open(content, help)">
-              {{help.address}}
+          <div class="help-content" *ngFor="let help of filteredHelpList">
+            <div
+              class="long-bar"
+              *ngIf="help.action === 'need'"
+              (click)="open(content, help)"
+            >
+              {{ help.address }}
             </div>
           </div>
         </ng-template>
@@ -28,7 +42,7 @@
 
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">{{helpObj.name}}</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{ helpObj.name }}</h4>
     <button
       type="button"
       class="close"
@@ -39,9 +53,10 @@
     </button>
   </div>
   <div class="modal-body">
-    {{helpObj.helpDescription}}
+    {{ helpObj.helpDescription }}
   </div>
   <div class="modal-footer">
-    Contact on <b>mobile:</b> {{helpObj.mobileNumber}} and <b>email:</b> {{helpObj.email}}
+    Contact me on <b>mobile:</b> {{ helpObj.mobileNumber }} and <b>email:</b>
+    {{ helpObj.email }}
   </div>
 </ng-template>

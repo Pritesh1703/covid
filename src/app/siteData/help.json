@@ -2,7 +2,7 @@
     "data": [
                 {
                     "action": "extend",
-                    "helpDescription": "need ",
+                    "helpDescription": "I can serve basic raw ration to nearby poor people, do contact me if you need my help.",
                     "address": "Hyderabad",
                     "mobileNumber": "999999999",
                     "email": "gaurav.mali125@gmail.com",
@@ -10,7 +10,7 @@
                 },
                 {
                     "action": "need",
-                    "helpDescription": "need ",
+                    "helpDescription": "I am not running out of money and unable to purchase basic ration, if we did not get any help soon we will not have anything to eat.",
                     "address": "Bangalore",
                     "mobileNumber": "999999999",
                     "email": "priteshkumar@gmail.com",

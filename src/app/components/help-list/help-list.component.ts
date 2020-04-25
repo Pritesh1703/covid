@@ -11,6 +11,8 @@ export class HelpListComponent implements OnInit {
   closeResult = '';
 
   helpList = [];
+  filteredHelpList = [];
+  uniqueLocations = [];
   helpObj = {
     action: 'extend',
     helpDescription: 'need ',
@@ -26,7 +28,8 @@ export class HelpListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.helpList = this.helpSvc.getHelpData();
+    this.helpList = this.filteredHelpList = this.helpSvc.getHelpData();
+    this.uniqueLocations = this.getAllLocations();
   }
 
   open(content, data) {
@@ -41,6 +44,15 @@ export class HelpListComponent implements OnInit {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         }
       );
+  }
+
+  filterBylocation(key) {
+    this.filteredHelpList = this.helpList.filter(help => { return help.address === key });
+  }
+
+  getAllLocations() {
+    const uniqueList = this.helpList.map(item => item.address).filter((value, index, self) => self.indexOf(value) === index)
+    return uniqueList;
   }
 
   private getDismissReason(reason: any) {
