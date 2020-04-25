@@ -53,7 +53,11 @@ export class HelpListComponent implements OnInit {
   }
 
   filterBylocation(key) {
-    this.filteredHelpList = this.helpList.filter(help => { return help.address === key });
+    if(key.length <= 0) {
+      this.filteredHelpList = this.helpList;
+    } else {
+      this.filteredHelpList = this.helpList.filter(help => { return help.address === key });
+    }
   }
 
   getAllLocations() {
