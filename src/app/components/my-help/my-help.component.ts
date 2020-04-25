@@ -13,7 +13,7 @@ export class MyHelpComponent implements OnInit {
   closeResult = '';
   helpObj = {
     action: 'extend',
-    helpDescription: 'need ',
+    helpDescription: 'seek ',
     address: 'Hyderabad',
     mobileNumber: '999999999',
     email: 'gaurav.mali125@gmail.com',
@@ -31,6 +31,10 @@ export class MyHelpComponent implements OnInit {
      }
 
   ngOnInit(): void {
+  }
+
+  refresh(): void {
+    this.helpList = this.helpSvc.getHelpData();
   }
 
   open(content2, data) {

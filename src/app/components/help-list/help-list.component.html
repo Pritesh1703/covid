@@ -17,10 +17,10 @@
           <div class="help-content" *ngFor="let help of filteredHelpList">
             <div
               class="long-bar"
-              *ngIf="help.action === 'need'"
+              *ngIf="help.action === 'seek'"
               (click)="open(content, help)"
             >
-              help needed at {{ help.subAddress }}, {{help.address}}
+              help seeked at {{ help.subAddress }}, {{help.address}}
             </div>
           </div>
         </ng-template>

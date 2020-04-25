@@ -15,7 +15,7 @@ export class HelpListComponent implements OnInit {
   uniqueLocations = [];
   helpObj = {
     action: 'extend',
-    helpDescription: 'need ',
+    helpDescription: 'seek ',
     address: 'Hyderabad',
     mobileNumber: '999999999',
     email: 'gaurav.mali125@gmail.com',
@@ -29,6 +29,7 @@ export class HelpListComponent implements OnInit {
 
   ngOnInit(): void {
     this.helpList = this.filteredHelpList = this.helpSvc.getHelpData();
+    console.log(this.helpList);
     this.uniqueLocations = this.getAllLocations();
   }
 

@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'covidHelp';
 
   constructor() {
-    localStorage.setItem('help', JSON.stringify(data.data));
+    if(!JSON.parse(localStorage.getItem('help'))) {
+      localStorage.setItem('help', JSON.stringify(data.data));
+    }
   }
 }
