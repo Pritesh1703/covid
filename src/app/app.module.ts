@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { HelpServiceService } from './services/help-service.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [LoginService, AngularFireAuth],
+  providers: [LoginService, AngularFireAuth, HelpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
