@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HelpServiceService } from 'src/app/services/help-service.service';
 
 @Component({
   selector: 'app-help-connect',
@@ -11,7 +12,8 @@ export class HelpConnectComponent implements OnInit {
   public helpConnectForm:FormGroup;
 
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private helpSvc:HelpServiceService
   ) { }
 
   ngOnInit(): void {
@@ -19,8 +21,14 @@ export class HelpConnectComponent implements OnInit {
       action:['',Validators.required],
       helpDescription:['',Validators.required],
       address:['',Validators.required],
-      mobile:['',Validators.required]
+      mobileNumber:['',Validators.required]
     })
+  }
+
+  public onSubmit(){
+    this.helpSvc.addHelpData(this.helpConnectForm.value);
+    console.log(this.helpConnectForm.value);
+    console.log(this.helpSvc.getHelpData());
   }
 
 }

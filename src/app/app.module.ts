@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HelpServiceService } from './services/help-service.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [LoginService, AngularFireAuth],
+  providers: [LoginService, AngularFireAuth, HelpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
