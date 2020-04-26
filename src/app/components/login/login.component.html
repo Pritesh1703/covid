@@ -1,19 +1,27 @@
-<div class="container mt-20px">
-    <div class="row">
-      <div class="col-5">
-        <form action="" [formGroup]="loginForm">
-            <div class="form-group form-check">
-                <label for="role">Select Role to Login</label>
-                <select class="form-control" #role id="role" formControlName="role" (change)="toggleLogin(role.value)">
-                    <option value="">Select Role</option>
-                    <option value="individual">individual</option>
-                    <option value="NGO">NGO</option>
-                </select>
-            </div>
-            <div class="form-group form-check">
-                <button *ngIf="isSelected" class="btn btn-primary" (click)="login()">Login with Google</button>
-            </div>
-        </form>
+<div class="login-container">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          Login
+          <hr>
+          <form action="" [formGroup]="loginForm">
+              <div class="form-group form-check">
+                  <label for="role">Select Role to Login</label>
+                  <select class="form-control" #role id="role" formControlName="role" (change)="toggleLogin(role.value)">
+                      <option value="">Select Role</option>
+                      <option value="individual">individual</option>
+                      <option value="NGO">NGO</option>
+                      <option value="NGO">Gov. Org</option>
+                  </select>
+              </div>
+              <div class="form-group form-check">
+                  <button *ngIf="isSelected" class="btn btn-primary" (click)="login()">Login with Google</button>
+              </div>
+          </form>
+        </div>
       </div>
     </div>
+  </div>
+
   </div>

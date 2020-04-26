@@ -2,7 +2,6 @@
   <div class="card-header">
     <div class="float-left">Help Cases</div>
     <div class="float-right">
-      Filter based on location :
     <select class="form-control-custom" placeholder="Select Role" name="filter" id="filter" (change)="filterBylocation(loc.value)" #loc>
         <option value="">Select Location</option>  
         <option *ngFor="let location of uniqueLocations" [value]="location">{{location}}</option>
@@ -16,11 +15,11 @@
         <ng-template ngbTabContent>
           <div class="help-content" *ngFor="let help of filteredHelpList">
             <div
-              class="long-bar"
+              class="long-bar mt-2"
               *ngIf="help.action === 'seek'"
               (click)="open(content, help)"
             >
-              help seeked at {{ help.subAddress }}, {{help.address}}
+              Looking for help at {{ help.subAddress }}, {{help.address}}
             </div>
           </div>
         </ng-template>
@@ -29,11 +28,11 @@
         <ng-template ngbTabContent>
           <div class="help-content" *ngFor="let help of filteredHelpList">
             <div
-              class="long-bar"
+              class="long-bar mt-2"
               *ngIf="help.action === 'extend'"
               (click)="open(content, help)"
             >
-            help available at {{ help.subAddress }}, {{help.address}}
+            Want to help at {{ help.subAddress }}, {{help.address}}
             </div>
           </div>
         </ng-template>

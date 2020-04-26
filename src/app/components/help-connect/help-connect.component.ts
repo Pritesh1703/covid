@@ -22,7 +22,9 @@ export class HelpConnectComponent implements OnInit {
     this.helpConnectForm=this.fb.group({
       action:['',Validators.required],
       helpDescription:['',Validators.required],
-      address:['',Validators.required],
+      city:['',Validators.required],
+      locality:['',Validators.required],
+      street:['',Validators.required],
       mobileNumber:['',Validators.required]
     })
   }
@@ -31,6 +33,7 @@ export class HelpConnectComponent implements OnInit {
     this.helpSvc.addHelpData(this.helpConnectForm.value);
     this.successMsg=true;
     this.helpConnectForm.reset();
+
     console.log(this.helpConnectForm.value);
     console.log(this.helpSvc.getHelpData());
   }
