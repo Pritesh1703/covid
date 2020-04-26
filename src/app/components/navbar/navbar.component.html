@@ -2,8 +2,8 @@
   <a class="navbar-brand nav-title">COVID-19 Connect</a>
   <a class="navbar-brand" *ngIf="user">{{user.displayName}}</a>
   <a class="nav-link" *ngIf="user" routerLink="dashboard">Home</a>
-  <a class="nav-link" *ngIf="user" routerLink="educate">Educate Yourself</a>
-  <a class="nav-link" *ngIf="user" routerLink="assessment">Self Assessment</a>
+  <a class="nav-link" routerLink="educate">Educate Yourself</a>
+  <a class="nav-link" routerLink="assessment">Self Assessment</a>
   <a class="nav-link" *ngIf="!user" routerLink="login">Login</a>
   <a class="nav-link" *ngIf="user" (click)="logout()">Logout</a>
 </nav>
