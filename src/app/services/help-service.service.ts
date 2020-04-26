@@ -19,9 +19,9 @@ export class HelpServiceService {
     this.afAuth.authState.subscribe(user => {
       object.name = user.displayName;
       object.email = user.email;
-      object.address = object.street + ',' +object.locality + object.city;
+      object.address =object.city;
       if(!object.subAddress) {
-        object.subAddress = 'Locality Of Somewhere in';
+        object.subAddress = 'Locality Of Somewhere in ' +  object.street + ',' +object.locality;
       }
       data.push(object);
       localStorage.setItem('help', JSON.stringify(data));
