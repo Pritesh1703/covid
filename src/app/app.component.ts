@@ -11,6 +11,7 @@ export class AppComponent {
 
   constructor() {
     if(!JSON.parse(localStorage.getItem('help'))) {
+      console.log('pritesh');
       localStorage.setItem('help', JSON.stringify(data.data));
     }
   }
