@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'covidHelp';
 
   constructor() {
+    localStorage.setItem('help', JSON.stringify(data.data));
     if(!JSON.parse(localStorage.getItem('help'))) {
       console.log('pritesh');
       localStorage.setItem('help', JSON.stringify(data.data));

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "covidhelp-cb8a1"
+  },
+  "targets": {
+    "covidhelp-cb8a1": {
+      "hosting": {
+        "covidHelp": [
+          "covidhelp-cb8a1"
+        ]
+      }
+    }
+  }
+}
